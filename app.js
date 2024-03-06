@@ -78,3 +78,40 @@ const crearIngresoHTML = (ingresos) => {
     `;
   return ingresoHTML;
 };
+
+const eliminarIngreso = (id) => {
+  let indiceEliminar = ingresos.findIndex((ingresos) => ingresos.id === id);
+  ingresos.splice(indiceEliminar, 1);
+  cargarCabecero();
+  cargarIngresos();
+};
+
+const cargarEgresos = () => {
+  let EgresosHTML = "";
+  for (let egreso of egresos) {
+    EgresosHTML += crearEgresoHTML(egreso);
+  }
+  document.getElementById("lista-egreso").innerHTML = EgresosHTML;
+};
+
+const crearEgresoHTML = (egresos) => {
+  let egresoHTML = `
+    <div class="elemento limpiarEstilos">
+    <div class="elemento_descripcion">${egresos.descripcion}</div>
+    <div class="derecha limpiarEstilos">
+        <div class="elemento_valor">${formatoMoneda(egresos.valor)}</div>
+        <div class="elemento_porcentaje">${foramatoPorcentaje(
+          egresos.valor / totalEgresos()
+        )}</div>
+        <div class="elemento_eliminar">
+            <button class="elemento_eliminar--btn">
+                <ion-icon name="close-outline" onclick='eliminarEgreso(${
+                  egresos.id
+                })'></ion-icon>
+            </button>
+        </div>
+    </div>
+</div>
+    `;
+  return egresoHTML;
+};
