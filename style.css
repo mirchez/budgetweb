@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.limpiarEstilos::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+body {
+  color: #555;
+  font-family: Open Sans;
+  font-size: 16px;
+  position: relative;
+  height: 100vh;
+  font-weight: 400;
+}
+
+.derecha {
+  float: right;
+}
+.rojo {
+  color: #ff5049 !important;
+}
+.rojofocus:focus {
+  border: 1px solid #ff5049 !important;
+}
