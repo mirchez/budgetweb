@@ -192,3 +192,38 @@ body {
   width: 370px;
   margin-right: 70px;
 }
+
+.egreso {
+  float: left;
+  width: 370px;
+}
+
+h2 {
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+
+.ingreso_titulo {
+  color: #28b9b5;
+}
+.egreso_titulo {
+  color: #ff5049;
+}
+
+.elemento {
+  padding: 13px;
+  border-bottom: 1px solid #e7e7e7;
+}
+
+.elemento:first-child {
+  border-top: 1px solid #e7e7e7;
+}
+.elemento:nth-child(even) {
+  background-color: #f7f7f7;
+}
+
+.elemento_descripcion {
+  float: left;
+}
