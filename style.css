@@ -227,3 +227,31 @@ h2 {
 .elemento_descripcion {
   float: left;
 }
+
+.elemento_valor {
+  float: left;
+  transition: transform 0.3s;
+}
+
+.elemento_porcentaje {
+  float: left;
+  margin-left: 20px;
+  transition: transform 0.3s;
+  font-size: 11px;
+  background-color: #ffdad9;
+  padding: 3px;
+  border-radius: 3px;
+  width: 45px;
+  text-align: center;
+}
+
+.ingreso .elemento_valor,
+.ingreso .elemento_eliminar--btn {
+  color: #28b9b5;
+}
+
+.egreso .elemento_valor,
+.egreso .elemento_porcentaje,
+.egreso .elemento_eliminar--btn {
+  color: #ff5049;
+}
